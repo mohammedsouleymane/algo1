@@ -3,11 +3,9 @@
 - hocus-pocus
 
 ## oefening 9
-- abracadabra
-- 10001010123
+- abracadabra -> 10001010123
 
-- h a a h i i h a a h a a h i i
-- -1 0 0 0 1 0 0 1 2 3 4 2 3 4 5
+- h a a h i i h a a h a a h i i -> -1 0 0 0 1 0 0 1 2 3 4 2 3 4 5
 
 ## oefening 10
 - (string -> (number -> number))
@@ -82,7 +80,5 @@
 
 - min-ascii 101 -> e
 - max-ascii 116 -> t
-- efghijklmnopqrst
-- 6919399992949987
--           5
+- efghijklmnopqrst -> 69193999929(54)9987
 
