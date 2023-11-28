@@ -83,3 +83,29 @@
 (for-each (lambda (x) (plist:add-after! zz x)) nums)
 (_prtln (intersect zz z))
 ```
+
+## oefening 8
+```scheme 
+(define (ternary-search slst key)
+      (define ==? (equality slst))
+      (define <<? (lesser slst))
+      (define vect (storage slst))
+      (define leng (size slst))
+      (let ternary-search
+        ((left 0)
+         (right (- leng 1))) 
+            (let ((mid1 (+ left (quotient (- right left) 3)))
+                  (mid2 (- right (quotient (- right left) 3))))
+              (cond
+                ((< right left) (current! slst -1))
+                ((==? (vector-ref vect mid1) key) 
+                 (current! slst mid1))
+                ((==? (vector-ref vect mid2) key) 
+                 (current! slst mid2))
+                ((<<? (vector-ref vect mid2) key)
+                 (ternary-search (+ mid2 1) right))
+                ((<<? key (vector-ref vect mid1))
+                 (ternary-search left (- mid1 1)))
+                (else
+                 (ternary-search (+ mid1 1) (- mid2 1) )))) ) slst)
+```
